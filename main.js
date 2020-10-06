@@ -1,6 +1,6 @@
 var lmarkt = document.querySelector(".mobile-view");
 var btnAutoResize = document.querySelector(".btn-autoresize")
-var labelForChangeWidthAdaptiveLmarkt = document.querySelectorAll(".lmarkt-layout label");
+var labelForChangeWidthAdaptiveLmarkt = document.querySelectorAll(".demonstration-website label");
 
 btnAutoResize.addEventListener("click", function () {
 	lmarkt.classList.toggle("mobile-view-autoresize");
