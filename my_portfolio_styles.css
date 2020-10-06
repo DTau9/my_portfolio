@@ -1,0 +1,235 @@
+body {
+	margin  : 0;
+	overflow: hidden scroll;
+}
+
+input {
+	display: none;
+}
+
+.lmarkt-layout {
+	align-items    : center;
+	display        : flex;
+	gap            : 30px;
+	height         : calc(100vw * 0.5625);
+	justify-content: center;
+	overflow       : hidden;
+	width          : 100vw;
+}
+
+.control-panel {
+	align-items    : center;
+	display        : flex;
+	flex-direction : column;
+	justify-content: center;
+	left           : 0;
+	padding        : 0 10px;
+	position       : fixed;
+	top            : 25%;
+}
+
+.iframe-block_lmarkt-layout {
+	grid-column: 2/3;
+}
+
+label,
+.btn-autoresize,
+.opensite {
+	background-position: center;
+	background-repeat  : no-repeat;
+	background-size    : contain;
+	cursor             : pointer;
+	display            : block;
+	height             : 50px;
+	margin-bottom      : 25px;
+	width              : 50px;
+}
+
+label:hover,
+.btn-autoresize:hover,
+.opensite:hover {
+	opacity: 0.5;
+}
+
+label[for="lmarkt-for-mobile"] {
+	background-image: url(icon/mobile.svg);
+}
+
+label[for="lmarkt-for-tablet"] {
+	background-image: url(icon/tablet.svg);
+	height          : 60px;
+}
+
+label[for="lmarkt-for-tablet-album"] {
+	background-image: url(icon/tablethorizontal.svg);
+	width           : 60px;
+}
+
+label[for="lmarkt-for-desktop"] {
+	background-image: url(icon/desktop.svg);
+	height          : 75px;
+	width           : 75px;
+}
+
+label[for="lmarkt-resize"] {
+	background-image: url(icon/arrows.svg);
+}
+
+.opensite {
+	background-image: url(icon/link.svg);
+	display         : block;
+}
+
+.mobile-wrapper,
+.tablet-wrapper,
+.tablet-wrapper-album,
+.desktop-wrapper,
+.resize-wrapper {
+	display: none;
+}
+
+#lmarkt-for-mobile:checked~.lmarkt-layout .mobile-wrapper {
+	display: block;
+}
+
+#lmarkt-for-tablet:checked~.lmarkt-layout .tablet-wrapper {
+	display: block;
+}
+
+#lmarkt-for-tablet-album:checked~.lmarkt-layout .tablet-wrapper-album {
+	display: block;
+}
+
+#lmarkt-for-desktop:checked~.lmarkt-layout .desktop-wrapper {
+	display: block;
+}
+
+#lmarkt-resize:checked~.lmarkt-layout .resize-wrapper {
+	display: block;
+}
+
+/* .mobile-view-autoresize {
+	animation-name           : autoresize;
+	animation-duration       : 20s;
+	animation-iteration-count: infinite;
+	animation-delay          : 0s;
+	animation-timing-function: steps(4, start);
+} */
+
+@keyframes autoresize {
+	0% {
+		height: 568px;
+		width : 320px;
+	}
+
+	50% {
+		height: 1024px;
+		width : 1500px;
+	}
+
+	100% {
+		height: 568px;
+		width : 320px;
+	}
+
+}
+
+/* !----------------------- */
+
+.mobile-wrapper,
+.tablet-wrapper,
+.tablet-wrapper-album,
+.desktop-wrapper,
+.resize-wrapper {
+	margin  : 0 auto;
+	position: relative;
+}
+
+.mobile-wrapper::before,
+.tablet-wrapper::before,
+.tablet-wrapper-album::before,
+.desktop-wrapper::before {
+	background-size    : cover;
+	background-position: center;
+	background-repeat  : no-repeat;
+	content            : "";
+	display            : block;
+	position           : absolute;
+	z-index            : -1;
+}
+
+.mobile-view,
+.tablet-view,
+.tablet-view-album,
+.desktop-view,
+.resize-view {
+	height: 100%;
+	width : 100%;
+}
+
+.mobile-wrapper {
+	height: 568px;
+	width : 320px;
+}
+
+.mobile-wrapper::before {
+	background-image: url(img/iphone.png);
+	height          : 780px;
+	left            : -29px;
+	top             : -107px;
+	width           : 376px;
+}
+
+.tablet-wrapper {
+	height   : 1024px;
+	transform: scale(0.7);
+	width    : 768px;
+
+}
+
+.tablet-wrapper::before {
+	background-image: url(img/ipad.png);
+	height          : 857px;
+	left            : -248px;
+	top             : 82px;
+	transform       : rotate(90deg);
+	width           : 1269px;
+}
+
+.tablet-wrapper-album {
+	height   : 768px;
+	transform: scale(0.8);
+	width    : 1025px;
+}
+
+.tablet-wrapper-album::before {
+	background-image: url(img/ipad.png);
+	height          : 866px;
+	left            : -132px;
+	top             : -45px;
+	width           : 1285px;
+}
+
+.desktop-wrapper {
+	height   : 1100px;
+	transform: scale(0.5);
+	width    : 1920px;
+}
+
+.desktop-wrapper::before {
+	background-image: url(img/imac.png);
+	height          : 1888px;
+	left            : -68px;
+	top             : -170px;
+	width           : 2088px;
+}
+
+.resize-wrapper {
+	animation-name           : autoresize;
+	animation-duration       : 20s;
+	animation-iteration-count: infinite;
+	animation-delay          : 0s;
+	animation-timing-function: steps(4, start);
+}
+
+/* !-------------------------------- */
