@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>DTau</title>
+	<title>DTau_portfolio</title>
 	<link rel="stylesheet" href="my_portfolio_styles.css">
 	<link sizes="16x16" rel="icon" href="icon/profile_photo.ico" type="image/png">
 	<link rel="shortcut icon" type="image/x-icon" href="icon/profile_photo.ico">
@@ -18,41 +18,89 @@
 	<input id="lmarkt-for-desktop" type="radio" name="lmarkt">
 	<input id="lmarkt-resize" type="radio" name="lmarkt">
 
+	<input id="russgaz-for-mobile" type="radio" name="russgaz" checked>
+	<input id="russgaz-for-tablet" type="radio" name="russgaz">
+	<input id="russgaz-for-tablet-album" type="radio" name="russgaz">
+	<input id="russgaz-for-desktop" type="radio" name="russgaz">
+	<input id="russgaz-resize" type="radio" name="russgaz">
 
-	<div class="demonstration-website">
+
+	<div class="demonstration-website demonstration-website_lmarkt">
 		<div class="control-panel">
-			<label for="lmarkt-for-mobile"></label>
-			<label for="lmarkt-for-tablet"></label>
-			<label for="lmarkt-for-tablet-album"></label>
-			<label for="lmarkt-for-desktop"></label>
-			<label for="lmarkt-resize"></label>
-			<a class="opensite" href="https://dtau9.github.io/lmarkt/"></a>
+			<label class="control-panel__item control-panel__item_mobile" for="lmarkt-for-mobile"></label>
+			<label class="control-panel__item control-panel__item_tablet" for="lmarkt-for-tablet"></label>
+			<label class="control-panel__item control-panel__item_tablet-album" for="lmarkt-for-tablet-album"></label>
+			<label class="control-panel__item control-panel__item_desktop" for="lmarkt-for-desktop"></label>
+			<label class="control-panel__item control-panel__item_resize" for="lmarkt-resize">
+				<!-- <div class="nav-button nav-button_play"></div>
+				<div class="nav-button nav-button_pause"></div> -->
+			</label>
+			<a class="control-panel__item opensite" href="https://dtau9.github.io/lmarkt/"></a>
 		</div>
 
-		<div class="mobile-wrapper">
+		<div class="mobile-wrapper mobile-wrapper_lmarkt">
 			<iframe class="mobile-view" src="https://dtau9.github.io/lmarkt/" frameborder="0" name="testfraime"></iframe>
 		</div>
 
-		<div class="tablet-wrapper">
+		<div class="tablet-wrapper tablet-wrapper_lmarkt">
 			<iframe class="tablet-view" src="https://dtau9.github.io/lmarkt/" frameborder="0" name="testfraime"></iframe>
 		</div>
 
-		<div class="tablet-wrapper-album">
+		<div class="tablet-wrapper-album tablet-wrapper-album_lmarkt">
 			<iframe class="tablet-view-album" src="https://dtau9.github.io/lmarkt/" frameborder="0"
 				name="testfraime"></iframe>
 		</div>
 
-		<div class="desktop-wrapper">
+		<div class="desktop-wrapper desktop-wrapper_lmarkt">
 			<iframe class="desktop-view" src="https://dtau9.github.io/lmarkt/" frameborder="0" name="testfraime"></iframe>
 		</div>
 
-		<div class="resize-wrapper">
+		<div class="resize-wrapper resize-wrapper_lmarkt">
 			<iframe class="resize-view" src="https://dtau9.github.io/lmarkt/" frameborder="0" name="testfraime"></iframe>
 		</div>
 
 	</div>
 
-	<!-- <script src="main.js"></script> -->
+	<!-- ! -------------------------- сайт 2---------------- -->
+	<div class="demonstration-website demonstration-website_russgaz">
+
+		<div class="control-panel">
+			<label class="control-panel__item control-panel__item_mobile" for="russgaz-for-mobile"></label>
+			<label class="control-panel__item control-panel__item_tablet" for="russgaz-for-tablet"></label>
+			<label class="control-panel__item control-panel__item_tablet-album" for="russgaz-for-tablet-album"></label>
+			<label class="control-panel__item control-panel__item_desktop" for="russgaz-for-desktop"></label>
+			<label class="control-panel__item control-panel__item_resize" for="russgaz-resize">
+				<!-- <div class="nav-button nav-button_play"></div>
+				<div class="nav-button nav-button_pause"></div> -->
+			</label>
+			<a class="control-panel__item opensite" href="https://dtau9.github.io/russgaz"></a>
+		</div>
+
+		<div class="mobile-wrapper mobile-wrapper_russgaz">
+			<iframe class="mobile-view" src="https://dtau9.github.io/russgaz" frameborder="0" name="testfraime"></iframe>
+		</div>
+
+		<div class="tablet-wrapper tablet-wrapper_russgaz">
+			<iframe class="tablet-view" src="https://dtau9.github.io/russgaz/" frameborder="0" name="testfraime"></iframe>
+		</div>
+
+		<div class="tablet-wrapper-album tablet-wrapper-album_russgaz">
+			<iframe class="tablet-view-album" src="https://dtau9.github.io/russgaz/" frameborder="0"
+				name="testfraime"></iframe>
+		</div>
+
+		<div class="desktop-wrapper desktop-wrapper_russgaz">
+			<iframe class="desktop-view" src="https://dtau9.github.io/russgaz/" frameborder="0" name="testfraime"></iframe>
+		</div>
+
+		<div class="resize-wrapper resize-wrapper_russgaz">
+			<iframe class="resize-view" src="https://dtau9.github.io/russgaz/" frameborder="0" name="testfraime"></iframe>
+		</div>
+
+	</div>
+
+	<script src="lib/gsap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
