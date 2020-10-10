@@ -7,7 +7,12 @@ gsap.to(".demonstration-website_lmarkt", {
 
 gsap.to(".demonstration-website_russgaz", {
 	duration: 2,
-	backgroundImage: "linear-gradient(180deg, rgb(181, 205, 255) 20%, rgb(205, 205, 255))"
+	backgroundImage: "linear-gradient(180deg, rgb(181, 205, 255)80%, rgb(255,230,180))"
+})
+
+gsap.to(".demonstration-website_kvast", {
+	duration: 2,
+	backgroundColor: "rgb(255,230,180)"
 })
 
 gsap.from(".mobile-wrapper", {
@@ -27,9 +32,7 @@ tl.from(".control-panel__item", {
 
 tl.to(".control-panel__item", {
 	boxShadow: "0 0 33px -7px #000, inset 0 0 33px -10px #000",
-	//альтернативный цвет тени
-	// boxShadow: "0 0 33px -7px #eeffff, inset 0 0 33px -10px #eeffff",
-	duration: 2
+	duration: 1.5
 })
 
 // var infinitLoopResize = gsap.timeline({ repeat: -1, yoyo: true })

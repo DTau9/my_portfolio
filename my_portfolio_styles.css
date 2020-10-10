@@ -106,6 +106,20 @@ input {
 	position           : relative;
 }
 
+.mobile-wrapper,
+.desktop-wrapper {
+	filter: drop-shadow(2px 4px 5px black);
+}
+
+.tablet-wrapper,
+.tablet-wrapper-album {
+	filter: drop-shadow(2px 4px 14px black);
+}
+
+.resize-wrapper_lmarkt {
+	animation-name: autoresize-untill_1500;
+}
+
 #lmarkt-for-mobile:checked~.demonstration-website .mobile-wrapper_lmarkt {
 	display: block;
 }
@@ -175,9 +189,9 @@ iframe {
 
 .desktop-wrapper {
 	background-image: url(img/imac.png);
-	height          : 1568px;
+	height          : 1563px;
 	transform       : scale(0.65) translateY(-29%);
-	width           : 1717px;
+	width           : 1718px;
 }
 
 .desktop-view {
@@ -188,7 +202,6 @@ iframe {
 }
 
 .resize-wrapper {
-	animation-name           : autoresize;
 	animation-duration       : 20s;
 	animation-iteration-count: infinite;
 	animation-delay          : 0s;
@@ -201,7 +214,7 @@ iframe {
 	width : 100%;
 }
 
-@keyframes autoresize {
+@keyframes autoresize-untill_1500 {
 	0% {
 		height: 568px;
 		width : 320px;
@@ -217,6 +230,28 @@ iframe {
 		width : 320px;
 	}
 
+}
+
+@keyframes autoresize-untill_1920 {
+	0% {
+		height: 568px;
+		width : 320px;
+	}
+
+	50% {
+		height: 1024px;
+		width : 1920px;
+	}
+
+	100% {
+		transform: scale(0.8);
+		height   : 568px;
+		width    : 320px;
+	}
+}
+
+.resize-wrapper_russgaz {
+	animation-name: autoresize-untill_1920;
 }
 
 #russgaz-for-mobile:checked~.demonstration-website .mobile-wrapper_russgaz {
@@ -236,5 +271,9 @@ iframe {
 }
 
 #russgaz-resize:checked~.demonstration-website .resize-wrapper_russgaz {
+	display: block;
+}
+
+.desktop-wrapper_kvast {
 	display: block;
 }
