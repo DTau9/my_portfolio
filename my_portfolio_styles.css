@@ -34,7 +34,9 @@ input {
 	border-radius  : 40px;
 }
 
-.control-panel__item {
+.control-panel__item,
+.info-icon_open,
+.info-icon_close {
 	background-position: center;
 	background-repeat  : no-repeat;
 	background-size    : 75%;
@@ -51,7 +53,8 @@ input {
 }
 
 .control-panel__item:hover {
-	opacity: 0.5;
+	box-shadow: 0 0 33px -7px #e4fedc, inset 0 0 33px -10px #e4fedc !important;
+	transform : scale(1.1) !important;
 }
 
 .control-panel__item_mobile {
@@ -82,16 +85,34 @@ input {
 }
 
 .about-site {
-	background-image: url(icon/info-icon.svg);
-	cursor          : auto;
+	background-color: transparent;
+	right           : 7%;
 	position        : absolute;
-	right           : 50px;
-	top             : 200px;
-	z-index         : 1;
+	top             : 18.5%;
+	z-index         : 99;
 }
 
-.about-site:hover .about-site__description {
-	transform: translate(-95%, 16%) scale(1);
+.info-button {
+	position: absolute;
+	top     : -65px;
+	right   : -65px;
+}
+
+.info-icon {
+	position: absolute;
+}
+
+.info-icon_open {
+	background-image: url(icon/info-icon.svg);
+	transform       : rotateY(0);
+	transition      : all 0.5s;
+}
+
+.info-icon_close {
+	background-image: url(icon/cross.svg);
+	transform       : rotateX(90deg);
+	transition      : all 0.5s;
+
 }
 
 .about-site__description {
@@ -99,12 +120,57 @@ input {
 	box-shadow             : 13px 11px 27px -3px black;
 	border-radius          : 10px;
 	border-top-right-radius: 0;
-	font                   : 19px/25px Verdana, Geneva, Tahoma, sans-serif;
-	list-style-type        : none;
-	padding                : 10px;
-	transform              : translate(100%, -130%) scale(0);
-	transition             : all 0.5s ease-out;
+	font                   : 19px/25px Verdana, Tahoma, sans-serif;
+	margin                 : 0;
+	list-style             : inside;
+	list-style-type        : circle;
+	padding                : 16px 10px;
+	transform              : perspective(1000px) rotateY(-90deg) scale3d(2, 1.5, 1);
+	transition             : all 0.5s ease-in;
+	transform-origin       : right;
 	width                  : 30vw;
+}
+
+.about-site__description li {
+	margin-bottom: 10px;
+}
+
+#view-descriptions_lmarkt:checked~.demonstration-website_lmarkt .about-site__description {
+	transform: perspective(1000px) rotateY(0deg) scaleX(1);
+}
+
+#view-descriptions_lmarkt:checked~.demonstration-website_lmarkt .info-icon_open {
+	transform: rotateY(-90deg);
+}
+
+#view-descriptions_lmarkt:checked~.demonstration-website_lmarkt .info-icon_close {
+	transform: rotateX(0deg);
+}
+
+/* checked info russgaz */
+#view-descriptions_russgaz:checked~.demonstration-website_russgaz .about-site__description {
+	transform: perspective(1000px) rotateY(0deg) scaleX(1);
+}
+
+#view-descriptions_russgaz:checked~.demonstration-website_russgaz .info-icon_open {
+	transform: rotateY(-90deg);
+}
+
+#view-descriptions_russgaz:checked~.demonstration-website_russgaz .info-icon_close {
+	transform: rotateX(0deg);
+}
+
+/* checked info kvast */
+#view-descriptions_kvast:checked~.demonstration-website_kvast .about-site__description {
+	transform: perspective(1000px) rotateY(0deg) scaleX(1);
+}
+
+#view-descriptions_kvast:checked~.demonstration-website_kvast .info-icon_open {
+	transform: rotateY(-90deg);
+}
+
+#view-descriptions_kvast:checked~.demonstration-website_kvast .info-icon_close {
+	transform: rotateX(0deg);
 }
 
 .mobile-wrapper,

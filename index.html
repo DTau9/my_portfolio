@@ -38,33 +38,46 @@
 	<input id="lmarkt-for-tablet-album" type="radio" name="lmarkt">
 	<input id="lmarkt-for-desktop" type="radio" name="lmarkt">
 	<input id="lmarkt-resize" type="radio" name="lmarkt">
+	<input id="view-descriptions_lmarkt" type="checkbox">
 
 	<input id="russgaz-for-mobile" type="radio" name="russgaz" checked>
 	<input id="russgaz-for-tablet" type="radio" name="russgaz">
 	<input id="russgaz-for-tablet-album" type="radio" name="russgaz">
 	<input id="russgaz-for-desktop" type="radio" name="russgaz">
 	<input id="russgaz-resize" type="radio" name="russgaz">
+	<input id="view-descriptions_russgaz" type="checkbox">
+
+	<input id="view-descriptions_kvast" type="checkbox">
+
 
 	<div class="available-view">
 		Просмотр возможен при ширине экрана не менее 1500px.
 	</div>
+
 	<div class="demonstration-website demonstration-website_lmarkt">
 		<div class="control-panel">
 			<label class="control-panel__item control-panel__item_mobile" for="lmarkt-for-mobile"></label>
 			<label class="control-panel__item control-panel__item_tablet" for="lmarkt-for-tablet"></label>
 			<label class="control-panel__item control-panel__item_tablet-album" for="lmarkt-for-tablet-album"></label>
 			<label class="control-panel__item control-panel__item_desktop" for="lmarkt-for-desktop"></label>
-			<label class="control-panel__item control-panel__item_resize" for="lmarkt-resize">
+			<label class="control-panel__item control-panel__item_resize" for="lmarkt-resize"
+				title="Автоматически меняющаяся ширина">
 				<!-- <div class="nav-button nav-button_play"></div>
 				<div class="nav-button nav-button_pause"></div> -->
 			</label>
-			<a class="control-panel__item opensite" href="https://dtau9.github.io/lmarkt" target="_blank"></a>
+			<a class="control-panel__item opensite" href="https://dtau9.github.io/lmarkt" target="_blank"
+				title="Открыть сайт в новом окне"></a>
 		</div>
 
-		<div class="about-site control-panel__item">
+		<div class="about-site">
+			<label class="info-button control-panel__item" for="view-descriptions_lmarkt" class="open-info"
+				title="О сайте">
+				<i class="info-icon info-icon_open"></i>
+				<i class="info-icon info-icon_close"></i>
+			</label>
 			<ul class="about-site__description">
-				<li>Главная страница магазина инструментов свёрстана в адаптивном и "резиновом" дизайне.</li>
-				<li> Выпадаюoие меню сделаны на checkbox:checked.</li>
+				<li>Главная страница магазина музыкальных инструментов свёрстана в адаптивном и "резиновом" дизайне.</li>
+				<li>Выпадаюoие меню сделаны на checkbox:checked.</li>
 				<li>Подключен и настроен плагин карусели owlcarousel2, написана кастомная карусель на javascript.</li>
 				<li>Использовались Flexbox Layout и Grid Layout CSS модули.</li>
 			</ul>
@@ -101,18 +114,25 @@
 			<label class="control-panel__item control-panel__item_tablet" for="russgaz-for-tablet"></label>
 			<label class="control-panel__item control-panel__item_tablet-album" for="russgaz-for-tablet-album"></label>
 			<label class="control-panel__item control-panel__item_desktop" for="russgaz-for-desktop"></label>
-			<label class="control-panel__item control-panel__item_resize" for="russgaz-resize">
+			<label class="control-panel__item control-panel__item_resize" for="russgaz-resize"
+				title="Автоматически меняющаяся ширина">
 				<!-- <div class="nav-button nav-button_play"></div>
 				<div class="nav-button nav-button_pause"></div> -->
 			</label>
-			<a class="control-panel__item opensite" href="https://dtau9.github.io/russgaz" target="_blank"></a>
+			<a class="control-panel__item opensite" href="https://dtau9.github.io/russgaz" target="_blank"
+				title="Открыть сайт в новом окне"></a>
 		</div>
 
-		<div class="about-site control-panel__item">
+		<div class="about-site">
+			<label class="info-button control-panel__item" for="view-descriptions_russgaz" class="open-info"
+				title="О сайте">
+				<i class="info-icon info-icon_open"></i>
+				<i class="info-icon info-icon_close"></i>
+			</label>
 			<ul class="about-site__description">
-				<li>Сайт продажи газа свёрстан в адаптивном и "резиновом" дизайне.</li>
+				<li>Сайт по продаже газа свёрстан в адаптивном и "резиновом" дизайне.</li>
 				<li>Выпадающие меню сделаны на checkbox:checked.</li>
-				<li>Минимальное использование Flexbox Layout CSS модуля.</li>
+				<li>Минимальное использование Flexbox Layout CSS модуля..</li>
 				<li>Ширина отображаемых элементов в каталоге высчитывается по формуле, а их количество через переменную.
 				</li>
 			</ul>
@@ -144,10 +164,15 @@
 	<!-- ! -------------------------- сайт 3---------------- -->
 	<div class="demonstration-website demonstration-website_kvast">
 		<div class="control-panel">
-			<a class="control-panel__item opensite" href="https://dtau9.github.io/kvast" target="_blank"></a>
+			<a class="control-panel__item opensite" href="https://dtau9.github.io/kvast" target="_blank"
+				title="Открыть сайт в новом окне"></a>
 		</div>
 
-		<div class="about-site control-panel__item">
+		<div class="about-site">
+			<label class="info-button control-panel__item" for="view-descriptions_kvast" class="open-info" title="О сайте">
+				<i class="info-icon info-icon_open"></i>
+				<i class="info-icon info-icon_close"></i>
+			</label>
 			<ul class="about-site__description">
 				<li>Экзаменационный сайт по окончанию курсов в Html Academy.</li>
 				<li>Не резиновый, не адаптивный. Без использования Flexbox и Grid Layout CSS модулей.</li>
