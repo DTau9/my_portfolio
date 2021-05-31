@@ -1,5 +1,5 @@
 <h1>
-   Build a portfolio using TweenMax (GSAP).
+   Build a portfolio using TweenMax (GSAP)
 </h1>
 
 <p>
